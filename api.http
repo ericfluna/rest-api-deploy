@@ -1,0 +1,36 @@
+### Recuperar peliculas
+GET http://localhost:1234/movies
+
+### Recuperar una pelicula por genero y nombre
+GET http://localhost:1234/movies?genre=dRAma&search=fIcTioN
+
+### Recuperar peliculas por id
+GET http://localhost:1234/movies/241bf55d-b649-4109-af7c-0e6890ded3fc
+
+### Crear nueva pelicula
+POST http://localhost:1234/movies
+Content-Type: application/json
+
+{
+  "title": "Dracula",
+  "director": "Francis Ford Coppola",
+  "duration": 122,
+  "poster": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSA-mPb-yvWwr2pL6CwWcvQzTeQrw_p1fznHbOiNqZqT4bb37hA",
+  "genre": [
+    "Drama",
+    "Action"
+  ],
+  "year": 2002,
+  "rate": 10
+}
+
+
+### Actualizar pelicula
+PATCH  http://localhost:1234/movies/1eafe394-c851-4a2f-923a-8f840d13bfa5
+Content-Type: application/json
+
+{
+  "year": 2012,
+  "fds": 4
+}
+
